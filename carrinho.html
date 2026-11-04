@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Sacola de Compras | Doce Magia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- CABEÇALHO SEMÂNTICO (Identidade Visual Integrada) -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">🧁 Doce Magia</div>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="index.html#vitrine">Cardápio</a>
+          <a href="carrinho.html">🛒 Sacola (3)</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
+        
+        <h1 style="font-size: 1.75rem; color: #331b1b; margin-bottom: 1.5rem;">Sua Sacola de Doces</h1>
+
+        <!-- LAYOUT DE DUAS COLUNAS: TABELA + CARD LATERAL -->
+        <div class="cart-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: start;">
+            
+            <!-- COLUNA DA ESQUERDA: REQUISITO 1 - TABELA SEMÂNTICA COMPLETA -->
+            <div style="overflow-x: auto; flex: 2; min-width: 60%;">
+                <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #f5e1e1;">
+                    <caption>Relação de itens selecionados para encomenda e entrega imediata</caption>
+                    
+                    <thead>
+                        <tr style="background-color: #fff0f5;">
+                            <th scope="col" style="padding: 1rem; text-align: left; color: #331b1b;">Produto</th>
+                            <th scope="col" style="padding: 1rem; text-align: left; color: #331b1b;">Preço Unitário</th>
+                            <th scope="col" style="padding: 1rem; text-align: left; color: #331b1b;">Quantidade</th>
+                            <th scope="col" style="padding: 1rem; text-align: left; color: #331b1b;">Subtotal</th>
+                            <th scope="col" style="padding: 1rem; text-align: left; color: #331b1b;">Ação</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- Item 1: Bolo -->
+                        <tr style="border-bottom: 1px solid #f5e1e1;">
+                            <td style="padding: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <!-- Miniatura quadrada 64x64 com object-fit exigido -->
+                                    <img src="bolo2.jpg" alt="Bolo Trufado de Chocolate" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;" />
+                                    <div>
+                                        <strong style="color: #331b1b; display: block;">Bolo Trufado de Chocolate</strong>
+                                        <span style="font-size: 0.85rem; color: #8c7171;">Clássicos Reimaginados</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="padding: 1rem; color: #331b1b;">R$ 89,90</td>
+                            <td style="padding: 1rem;"><input type="number" min="1" value="1" style="width: 60px; padding: 0.4rem; border: 1px solid #f5e1e1; border-radius: 8px; text-align: center;" /></td>
+                            <td style="padding: 1rem; color: #331b1b; font-weight: 600;">R$ 89,90</td>
+                            <td style="padding: 1rem;"><button type="button" aria-label="Remover item" style="background: none; border: none; color: #dc2626; cursor: pointer; font-size: 1.25rem;">🗑️</button></td>
+                        </tr>
+
+                        <!-- Item 2: Cupcake -->
+                        <tr style="border-bottom: 1px solid #f5e1e1; background-color: #fffafb;">
+                            <td style="padding: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <img src="Cupcake.jpg" alt="Cupcake Gourmet de Baunilha" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;" />
+                                    <div>
+                                        <strong style="color: #331b1b; display: block;">Cupcake Gourmet Baunilha</strong>
+                                        <span style="font-size: 0.85rem; color: #8c7171;">Destaques do Dia</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="padding: 1rem; color: #331b1b;">R$ 12,50</td>
+                            <td style="padding: 1rem;"><input type="number" min="1" value="2" style="width: 60px; padding: 0.4rem; border: 1px solid #f5e1e1; border-radius: 8px; text-align: center;" /></td>
+                            <td style="padding: 1rem; color: #331b1b; font-weight: 600;">R$ 25,00</td>
+                            <td style="padding: 1rem;"><button type="button" aria-label="Remover item" style="background: none; border: none; color: #dc2626; cursor: pointer; font-size: 1.25rem;">🗑️</button></td>
+                        </tr>
+
+                        <!-- Item 3: Cookie -->
+                        <tr style="border-bottom: 1px solid #f5e1e1;">
+                            <td style="padding: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <img src="cookie.jpg" alt="Cookie Double Chocolate" style="width: 64px; height: 64px; object-fit: cover; border-radius: 8px;" />
+                                    <div>
+                                        <strong style="color: #331b1b; display: block;">Cookie Double Chocolate</strong>
+                                        <span style="font-size: 0.85rem; color: #8c7171;">Destaques do Dia</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="padding: 1rem; color: #331b1b;">R$ 8,90</td>
+                            <td style="padding: 1rem;"><input type="number" min="1" value="3" style="width: 60px; padding: 0.4rem; border: 1px solid #f5e1e1; border-radius: 8px; text-align: center;" /></td>
+                            <td style="padding: 1rem; color: #331b1b; font-weight: 600;">R$ 26,70</td>
+                            <td style="padding: 1rem;"><button type="button" aria-label="Remover item" style="background: none; border: none; color: #dc2626; cursor: pointer; font-size: 1.25rem;">🗑️</button></td>
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot>
+                        <tr>
+                            <!-- Requisito: Uso do colspan no tfoot -->
+                            <td colspan="5" style="padding: 1.25rem; text-align: right; color: #16a34a; font-weight: 600; background-color: #fff0f5;">
+                                ✨ Parabéns! Você garantiu <strong>Frete Grátis</strong> para esta entrega artesanal!
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- COLUNA DA DIREITA: REQUISITO 2 - CARD LATERAL ASIDE -->
+            <aside class="order-summary" style="background-color: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid #f5e1e1; min-width: 300px;">
+                <h2 style="font-size: 1.35rem; color: #331b1b; margin-bottom: 1.25rem; border-bottom: 2px dashed #f5e1e1; padding-bottom: 0.5rem;">Resumo do Pedido</h2>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; color: #4a2828;">
+                    <span>Subtotal</span>
+                    <span>R$ 141,60</span>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1.25rem; color: #4a2828;">
+                    <span>Valor do Frete</span>
+                    <span style="color: #16a34a; font-weight: 500;">Grátis</span>
+                </div>
+                
+                <!-- Campo Cupom de Desconto -->
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <input type="text" placeholder="Cupom de desconto" aria-label="Cupom de desconto" style="flex: 1; padding: 0.6rem 0.75rem; border: 1px solid #f5e1e1; border-radius: 8px; outline: none;" />
+                    <button type="button" style="background-color: #d47a8d; color: white; border: none; padding: 0.6rem 1rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Aplicar</button>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700; color: #331b1b; border-top: 1px solid #f5e1e1; padding-top: 1rem;">
+                    <span>Valor Total</span>
+                    <span style="color: #d47a8d;">R$ 141,60</span>
+                </div>
+                
+                <!-- Botão de destaque final direcionando ao cadastro/checkout -->
+                <a href="cadastro.html" class="btn-checkout" style="display: block; text-align: center; background-color: #d47a8d; color: white; padding: 1rem; border-radius: 12px; text-decoration: none; font-weight: 700; letter-spacing: 0.5px; transition: background-color 0.2s;">Finalizar Compra →</a>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2.5rem; margin-top: 4rem; border-top: 1px solid #f5e1e1; color: #8c7171;">
+        <p>&copy; 2026 Doce Magia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

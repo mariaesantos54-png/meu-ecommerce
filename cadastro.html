@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalizar Pedido | Doce Magia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- CABEÇALHO SEMÂNTICO -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">🧁 Doce Magia</div>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="index.html#vitrine">Cardápio</a>
+          <a href="carrinho.html">🛒 Sacola</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+        
+        <h1 style="font-size: 1.75rem; color: #b35d70; margin-bottom: 1.5rem; text-align: center;">Cadastro e Finalização do Pedido</h1>
+
+        <!-- FORMULÁRIO PRINCIPAL -->
+        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 2rem;">
+            
+            <!-- BLOCO 1: DADOS PESSOAIS -->
+            <fieldset style="border: 1px solid #f5e1e1; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+                <legend style="font-weight: 600; padding: 0 0.75rem; color: #d47a8d; font-size: 1.1rem;">Bloco 1 – Dados Pessoais</legend>
+                
+                <div class="form-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 0.5rem;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; grid-column: 1 / -1;">
+                        <label for="txt-nome" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Nome Completo</label>
+                        <input type="text" id="txt-nome" name="nome" required placeholder="Digite seu nome completo" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-email" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">E-mail</label>
+                        <input type="email" id="txt-email" name="email" required placeholder="exemplo@email.com" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-cpf" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">CPF</label>
+                        <input type="text" id="txt-cpf" name="cpf" required placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 000.000.000-00" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-tel" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Telefone / WhatsApp</label>
+                        <input type="tel" id="txt-tel" name="telefone" required placeholder="(00) 00000-0000" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-nasc" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Data de Nascimento</label>
+                        <input type="date" id="txt-nasc" name="nascimento" required />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-pass" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Senha de Acesso</label>
+                        <input type="password" id="txt-pass" name="senha" required minlength="6" placeholder="Mínimo 6 caracteres" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="file-avatar" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Foto de Perfil (Opcional)</label>
+                        <input type="file" id="file-avatar" name="avatar" accept="image/*" style="border: none; padding: 0.5rem 0;" />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- BLOCO 2: ENDEREÇO DE ENTREGA -->
+            <fieldset style="border: 1px solid #f5e1e1; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+                <legend style="font-weight: 600; padding: 0 0.75rem; color: #d47a8d; font-size: 1.1rem;">Bloco 2 – Endereço de Entrega</legend>
+                
+                <div class="form-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-top: 0.5rem;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-cep" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">CEP</label>
+                        <input type="text" id="txt-cep" name="cep" required placeholder="00000-000" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; grid-column: 1 / -1;">
+                        <label for="txt-rua" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Rua / Logradouro</label>
+                        <input type="text" id="txt-rua" name="logradouro" required placeholder="Avenida Paulista, Rua das Flores..." />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-num" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Número</label>
+                        <input type="text" id="txt-num" name="numero" required placeholder="123" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-comp" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Complemento</label>
+                        <input type="text" id="txt-comp" name="complemento" placeholder="Apto 42, Bloco B" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-bairro" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Bairro</label>
+                        <input type="text" id="txt-bairro" name="bairro" required placeholder="Bairro" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="txt-cidade" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Cidade</label>
+                        <input type="text" id="txt-cidade" name="cidade" required placeholder="Cidade" />
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="sel-estado" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Estado</label>
+                        <select id="sel-estado" name="estado" required>
+                            <option value="" disabled selected>Selecione seu Estado</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PR">Paraná</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- BLOCO 3: FORMA DE PAGAMENTO -->
+            <fieldset style="border: 1px solid #f5e1e1; border-radius: 12px; padding: 1.5rem; background-color: #fff;">
+                <legend style="font-weight: 600; padding: 0 0.75rem; color: #d47a8d; font-size: 1.1rem;">Bloco 3 – Forma de Pagamento</legend>
+                
+                <div class="payment-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+                    
+                    <label class="payment-label" style="border: 1px solid #f5e1e1; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 0.75rem; cursor: pointer; background-color: #fff;">
+                        <input type="radio" name="pagamento" value="pix" required style="width: auto;" />
+                        <span style="font-weight: 500; color: #331b1b;">PIX</span>
+                        <img src="logo_pix.png" alt="Logotipo do Pix" style="height: 20px; width: auto; margin-left: auto;" />
+                    </label>
+
+                    <label class="payment-label" style="border: 1px solid #f5e1e1; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 0.75rem; cursor: pointer; background-color: #fff;">
+                        <input type="radio" name="pagamento" value="cartao" style="width: auto;" />
+                        <span style="font-weight: 500; color: #331b1b;">Cartão de Crédito</span>
+                        <img src="mastercard.webp" alt="Logotipo Mastercard" style="height: 20px; width: auto; margin-left: auto;" />
+                    </label>
+
+                    <label class="payment-label" style="border: 1px solid #f5e1e1; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 0.75rem; cursor: pointer; background-color: #fff;">
+                        <input type="radio" name="pagamento" value="boleto" style="width: auto;" />
+                        <span style="font-weight: 500; color: #331b1b;">Boleto</span>

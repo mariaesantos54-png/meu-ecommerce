@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avise-me quando voltar | Doce Magia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CABEÇALHO (Mantendo a identidade do seu site) -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">🧁 Doce Magia</div>
+        <nav>
+          <a href="index.html">Voltar ao Cardápio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="order-wrapper">
+        <!-- RESUMO DO PRODUTO-->
+        <div class="product-summary">
+          <h2>Avise-me Quando Voltar 🔔</h2>
+          <h3>Cookie Double Chocolate</h3>
+          <p
+            class="status-esgotado"
+            style="color: #d47a8d; font-weight: bold; margin-top: 5px"
+          >
+            Item temporariamente esgotado
+          </p>
+        </div>
+
+        <!-- AVISO -->
+        <form id="form-aviso" action="#" method="POST">
+          <div class="form-group">
+            <label for="nome">Seu Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp / Telefone</label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              placeholder="(00) 00000-0000"
+              required
+            />
+          </div>
+          <!-- PARTE PRA AVISAR Q TA ESGOTADO-->
+          <div class="form-group">
+            <p style="font-size: 14px; color: #555; line-height: 1.4">
+              Cadastre seus dados acima. Assim que nossa cozinha preparar uma
+              nova fornada de <strong>Cookie Double Chocolate</strong>, nós te
+              enviaremos uma mensagem avisando na mesma hora!
+            </p>
+          </div>
+          <button type="submit" class="btn-buy btn-submit">
+            Quero ser avisado!
+          </button>
+        </form>
+        <a href="index.html" class="back-link">← Cancelar e voltar</a>
+      </div>
+    </main>
+
+    <!-- DIV DO POP-UP (Inicia oculta) -->
+    <div id="popup-confirmacao" class="popup-aviso">
+      ✅ Pedido de aviso confirmado com sucesso!
+    </div>
+
+    <!-- POP-UP-->
+    <script>
+      document
+        .getElementById("form-aviso")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const popup = document.getElementById("popup-confirmacao");
+          // FAZ APARECER
+          popup.classList.add("mostrar");
+
+          // LIMPA AS COISAS APOS O INVIO
+          this.reset();
+
+          // REMOVE O NEGOCIO DA TELA
+          setTimeout(function () {
+            popup.classList.remove("mostrar");
+          }, 4000);
+        });
+    </script>
+  </body>
+</html>

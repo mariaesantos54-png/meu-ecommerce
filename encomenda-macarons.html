@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Macarons Franceses | Doce Magia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- CABEÇALHO SEMÂNTICO -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">🧁 Doce Magia</div>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="carrinho.html">🛒 Sacola (0)</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
+        
+        <!-- NAVEGAÇÃO -->
+        <nav class="breadcrumb" style="margin-bottom: 1.5rem; color: #8c7171; font-size: 0.875rem;">
+            <a href="index.html" style="color: #d47a8d; text-decoration: none;">Início</a> &gt; 
+            <a href="index.html#vitrine" style="color: #d47a8d; text-decoration: none;">Destaques do Dia</a> &gt; 
+            Macarons Franceses
+        </nav>
+
+        <!-- REQUISITO 1: LAYOUT DE DUAS COLUNAS (GRID/FLEX) -->
+        <div class="product-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; margin-bottom: 3rem;">
+            
+            <!-- COLUNA DA ESQUERDA: GALERIA DE IMAGENS -->
+            <div class="gallery-container" style="display: flex; flex-direction: column; gap: 1rem;">
+                <!-- Foto principal com o nome do arquivo que está no seu cardápio (macarons.jpg) -->
+                <img src="macarons.jpg" alt="Caixa com macarons franceses coloridos em tons pastel" class="main-image" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px;" />
+                
+                <!-- Miniaturas (Thumbnails) com efeito hover gerenciado pelo CSS -->
+                <div class="thumbnails" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
+                    <img src="frontal_cupcake.jpg" alt="Vista da caixa de macarons aberta" />
+                    <img src="recheio.jpg" alt="Detalhe do recheio cremoso" />
+                    <img src="embalagnes_macarrons.jpg" alt="Embalagem fina Doce Magia" />
+                    <img src="preparação.jpg" alt="Variedade de doces franceses" />
+                </div>
+            </div>
+
+            <!-- COLUNA DA DIREITA: INFORMAÇÕES DE COMPRA -->
+            <div class="product-info" style="display: flex; flex-direction: column; gap: 1rem;">
+                <h1 style="font-size: 2rem; color: #331b1b;">Box Macarons Franceses (6 unid.)</h1>
+                
+                <!-- Avaliação em estrelas -->
+                <div class="rating" style="color: #f59e0b;">⭐⭐⭐⭐⭐ <span style="color: #8c7171; font-size: 0.875rem;">(56 avaliações)</span></div>
+                
+                <!-- Preço antigo e atual -->
+                <div class="price-box" style="margin: 0.5rem 0;">
+                    <span class="old-price" style="color: #8c7171; text-decoration: line-through; font-size: 1rem;">R$ 52,00</span>
+                    <div class="current-price" style="color: #d47a8d; font-size: 2.25rem; font-weight: 700;">R$ 45,00</div>
+                </div>
+
+                <!-- Seletor de opções usando <select> -->
+                <div class="options-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="size-select" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Escolha o tamanho da Box:</label>
+                    <select id="size-select" class="options-select" style="width: 100%; padding: 0.75rem; border: 1px solid #f5e1e1; border-radius: 12px; background-color: #fff;">
+                        <option value="p">Box Clássica (6 unidades) - R$ 45,00</option>
+                        <option value="m">Box Premium (12 unidades) - R$ 85,00</option>
+                        <option value="g">Torre Festa (24 unidades) - R$ 160,00</option>
+                    </select>
+                </div>
+
+                <!-- LINK OBRIGATÓRIO DIRECIONANDO PARA O CARRINHO -->
+                <a href="carrinho.html" class="btn-buy" style="display: inline-block; text-align: center; background-color: #d47a8d; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600;">Adicionar ao Carrinho</a>
+            </div>
+
+        </div>
+
+        <!-- REQUISITO 2: TABELA DE ESPECIFICAÇÕES TÉCNICAS REQUISITADA -->
+        <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: #d47a8d;">Especificações Técnicas</h2>
+        <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #f5e1e1;">
+            <caption style="padding: 0.75rem; font-size: 0.875rem; color: #8c7171; text-align: left;">Ficha técnica de preparo e consumo do produto</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">Origem / Fabricação</th>
+                    <td>Doce Magia Confeitaria Artesanal (Receita Francesa Original)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Base da Massa</th>
+                    <td>Farinha de Amêndoas Nobre e Merengue Italiano</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sabores Inclusos</th>
+                    <td>Sortidos (Pistache, Framboesa, Baunilha, Caramelo Salgado e Limão Siciliano)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Validade Máxima</th>
+                    <td>Até 5 dias mantido sob refrigeração para preservar a textura do ganache</td>
+                </tr>
+                <tr>
+                    <th scope="row">Alergênicos</th>
+                    <td>Contém ovos, lactose e derivados de amêndoas. Não contém glúten na receita original.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2.5rem; margin-top: 4rem; border-top: 1px solid #f5e1e1; color: #8c7171;">
+        <p>&copy; 2026 Doce Magia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

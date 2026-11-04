@@ -1,0 +1,695 @@
+/*1. VARIÁVEIS, RESET E CONFIGURAÇÕES GERAIS (PADRÕES W3C)*/
+:root {
+  --primary: #d47a8d;
+  /* COR ROSA DO LOGO*/
+  --primary-light: #fbebee;
+  /* FUNDO */
+  --dark: #1a1a1a;
+  /* CINZA PARA CONTRASTE */
+  --muted: #666666;
+  --bg-light: #fafafa;
+  /* FUNDO DA PAGINA */
+  --white: #ffffff;
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* TITULOS DAS SESSÕES */
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: var(--primary);
+  margin: 12px auto 0;
+}
+
+/*2. REQUISITO 1: IDENTIDADE VISUAL NO CABEÇALHO (HEADER)*/
+.main-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* 3. REQUISITO 2: BANNER PRINCIPAL RESPONSIVO (HERO)*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero picture img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  opacity: 0.7;
+  /* ESCURECE PARA DESTACAR O TEXTO */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white);
+  width: 85%;
+  z-index: 2;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/*4. REQUISITO 3: CATEGORIAS COM IMAGENS CIRCULARES (HOVER EXTRA)*/
+.categories-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  /* AUMENTADO: Afasta os círculos lateralmente e verticalmente */
+  padding: 20px 0;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.img-wrapper {
+  position: relative;
+  /* PERMITE Q O TEXTO FLUTE POR CIMA */
+  width: 130px;
+  /* TAMANHO */
+  height: 130px;
+  border-radius: 50%;
+  /* VIRA CICULOS*/
+  overflow: hidden;
+  /* CORTA AS COISAS Q SAEM DE DENTRO DO CIRCULO */
+  border: 3px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  /* AUMENTADO: SEPARA O CIRCULO DO TEXTO Q ESTA EM BAIXO */
+  transition: border-color 0.3s ease;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category-item span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+/* Efeito Hover das Categorias (QUANDO PASSA O MOUSE EM CIMA)*/
+.category-item:hover .img-wrapper {
+  border-color: #d4af37;
+  /* BORDA */
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.1);
+  /* AMPLIA A IMAGEM */
+}
+
+.category-item:hover span {
+  color: var(--primary);
+}
+
+/* TEXTOS Q FICAM DENTRO DO CIRCULO (INICIALMENTE OCULTOS) */
+.desc-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  /* COMEÇA INVISIVEL */
+  transition: opacity 0.3s ease;
+}
+
+.img-wrapper:hover .desc-hover {
+  opacity: 1;
+  /* REVELA OQ ESTA ESCRITO */
+}
+
+.desc-hover h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: #ffffff;
+}
+
+.desc-hover p {
+  font-size: 0.6rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* FFUNDO TRANPARENTE PARA CONTRASTAR COM O TEXTO DO CIRCULO */
+.bg-fruits {
+  background-color: rgba(230, 57, 70, 0.9);
+}
+
+.bg-viennoiserie {
+  background-color: rgba(186, 137, 85, 0.95);
+}
+
+.bg-classicos {
+  background-color: rgba(43, 45, 66, 0.9);
+}
+
+.bg-fleurs {
+  background-color: rgba(255, 182, 193, 0.9);
+}
+
+.desc-hover.bg-fleurs h4,
+.desc-hover.bg-fleurs p {
+  color: #000000;
+  /* LETRA PRETA NO FUNDO ROSA PRA DAR CONTRASTE */
+}
+
+/* 5. REQUISITO 4: VITRINE PADRONIZADA (PRODUTOS)*/
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.product-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* MANTÉM O QUADRADO PERFEITO  */
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+/* TEXTOS E INFORMAÇÕES */
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  height: 44px;
+  /* DEIXA OS BOTÕES ALINHADOS  */
+  display: -webkit-box;
+  line-clamp: 2;
+  /* LIMITA O TEXTO EM O MAXIMO 2 LINHAS */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 15px;
+  margin-top: auto;
+  /* EMPURRA O PREÇO E DESCRICAO PRA BAIXO */
+}
+
+/* AJUSTADO: Agora estiliza tags <a> para agirem como botões */
+.btn-buy {
+  display: inline-block;
+  /* Permite usar paddings e larguras corretas */
+  text-align: center;
+  /* Centraliza o texto */
+  text-decoration: none;
+  /* Remove a linha sublinhada padrão de link */
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-buy:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* 6. REQUISITO 5: PRODUTO "ESGOTADO" (FILTROS CSS) */
+.product-sold-out {
+  box-shadow: none;
+}
+
+.product-sold-out .product-image img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.product-sold-out:hover .product-image img {
+  transform: none;
+  /* TIRA O ZOOM DOS Q ESTÃO ESGOTADOS */
+}
+
+/* ETIQUETA FLUTUANTE (ESGOTADO)*/
+.badge-sold {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: rgba(26, 26, 26, 0.85);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 2px;
+  z-index: 10;
+}
+
+/* AJUSTADO: Deixa a tag <a> clicável para a função "Avise-me" */
+.btn-sold {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px;
+  background-color: #e5e5ea;
+  color: #8e8e93;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  /* Cursor de clique ativo */
+  transition: var(--transition);
+}
+
+.btn-sold:hover {
+  background-color: #d1d1d6;
+  /* Efeito hover cinza escuro sutil */
+}
+
+/* 7. REQUISITO 6: RODAPÉ E MEDIA QUERIES (RESPONSIVIDADE)*/
+.main-footer {
+  background-color: var(--white);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 35px 0;
+}
+
+/* TELAS PRA TABLET*/
+@media (max-width: 768px) {
+
+  .header-flex,
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav {
+    margin-top: 5px;
+  }
+
+  nav a {
+    margin: 0 12px;
+  }
+
+  .hero {
+    height: 350px;
+  }
+
+  .hero picture img {
+    height: 350px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.9rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 40px 0;
+  }
+
+  .categories-flex {
+    gap: 40px;
+    /* DEIXA SEPARADO CERTINHO NO TABLET TBM (SE AJUSTA) */
+  }
+}
+
+/* TELAS DE CELULARES  */
+@media (max-width: 480px) {
+  .img-wrapper {
+    width: 115px;
+    height: 115px;
+  }
+
+  .categories-flex {
+    gap: 30px;
+    /* AJUSTE PARA FUNCIONAR EM TELAS PEQUENAS*/
+  }
+}
+
+
+/* PARTE AONDE VC CLICA PRA ENCOMENDAR */
+.order-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.product-summary {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-summary h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.btn-submit {
+  margin-top: 10px;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.popup-aviso {
+  position: fixed;
+  bottom: -100px;
+  /* ESCONDIDO*/
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  /* VERDE COM SUCESSO*/
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: bottom 0.4s ease-in-out;
+  /* SOBRE E DESCE QUANDO VC CONFIRMA*/
+  z-index: 1000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* MOSTRAR O POP-UP */
+.popup-aviso.mostrar {
+  bottom: 20px;
+  /* SOBRE E DEPOS ABAIXA*/
+}
+
+/* PÁGINA DE DETALHES DO PRODUTO (REQUISITOS PARTE 2) */
+
+/* 1. Layout de Duas Colunas para a Galeria e Informações */
+.product-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Requisito: Foto principal com aspect-ratio e object-fit: cover */
+.main-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Grid das miniaturas logo abaixo da foto principal */
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+/* Requisito: Miniaturas com efeito de borda destacada no :hover */
+.thumbnails img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.thumbnails img:hover {
+    border-color: #d946ef; /* Destaca com a cor rosa da Doce Magia */
+    transform: scale(1.02); /* Dá um leve zoom elegante no hover */
+}
+
+/* Alinhamento da coluna de informações da direita */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 2. Estilização da Tabela de Especificações Técnicas */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Requisito de consistência visual */
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #f5e1e1;
+    margin: 1.5rem 0;
+}
+
+table th, table td {
+    padding: 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid #f5e1e1;
+}
+
+/* Garante o uso correto do th scope="row" conforme a rubrica */
+table th {
+    background-color: #fff0f5; /* Fundo rosa bem suave para os títulos internos */
+    font-weight: 600;
+    width: 30%;
+    color: #331b1b;
+}
+
+table td {
+    color: #4a2828;
+}
+
+/* Requisito obrigatório: Efeito Zebrado na tabela */
+table tbody tr:nth-child(even) {
+    background-color: #fffafb; /* Altera a cor das linhas pares de forma suave */
+}
+
+/* CARRINHO */
+@media (min-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 2fr 1fr !important;
+    }
+}
+
+.btn-checkout:hover {
+    background-color: #b35d70; /* SACOLA */
+}

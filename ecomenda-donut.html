@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encomendar Bolo Trufado de Chocolate | Doce Magia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CABEÇALHO (Mantendo a identidade do site) -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">🧁 Doce Magia</div>
+        <nav>
+          <a href="index.html">Voltar ao Cardápio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="order-wrapper">
+        <!-- Resumo do Produto Selecionado -->
+        <div class="product-summary">
+          <h2>Finalizar Encomenda</h2>
+          <h3>Cookie Double Chocolate</h3>
+          <p class="price">R$ 8,90</p>
+        </div>
+
+        <!-- Formulário de Pedido -->
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="nome">Seu Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp / Telefone</label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              placeholder="(00) 00000-0000"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="quantidade">Quantidade</label>
+            <select id="quantidade" name="quantidade">
+              <option value="1">1 unidade</option>
+              <option value="2">2 unidades</option>
+              <option value="3">3 unidades</option>
+              <option value="4">4 ou mais</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="data">Data da Entrega / Retirada</label>
+            <input type="date" id="data" name="data" required />
+          </div>
+
+          <div class="form-group">
+            <label for="observacoes">Observações ou Mensagem no Bolo</label>
+            <textarea
+              id="observacoes"
+              name="observacoes"
+              rows="3"
+              placeholder="Ex: Escrever 'Parabéns Maria' ou restrições alimentares..."
+            ></textarea>
+          </div>
+
+          <!-- Reutilizando sua classe de botão .btn-buy para manter o padrão visual rosa -->
+          <button type="submit" class="btn-buy btn-submit">
+            Confirmar Pedido
+          </button>
+        </form>
+
+        <a href="index.html" class="back-link">← Cancelar e voltar</a>
+      </div>
+    </main>
+
+    <!-- ESTRUTURA DO POP-UP -->
+    <div id="popup-confirmacao" class="popup-aviso">
+      ✅ Pedido confirmado com sucesso! Obrigado!
+    </div>
+
+    <!-- POP-UP -->
+    <script>
+      document
+        .getElementById("form-encomenda")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const popup = document.getElementById("popup-confirmacao");
+          popup.classList.add("mostrar");
+          this.reset();
+          setTimeout(function () {
+            popup.classList.remove("mostrar");
+          }, 4000);
+        });
+    </script>
+  </body>
+</html>

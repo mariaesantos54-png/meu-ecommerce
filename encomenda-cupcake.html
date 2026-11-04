@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cupcake Gourmet de Baunilha | Doce Magia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- CABEÇALHO SEMÂNTICO -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">🧁 Doce Magia</div>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="carrinho.html">🛒 Sacola (0)</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
+        
+        <!-- NAVEGAÇÃO -->
+        <nav class="breadcrumb" style="margin-bottom: 1.5rem; color: #8c7171; font-size: 0.875rem;">
+            <a href="index.html" style="color: #d47a8d; text-decoration: none;">Início</a> &gt; 
+            <a href="index.html#vitrine" style="color: #d47a8d; text-decoration: none;">Destaques do Dia</a> &gt; 
+            Cupcake Gourmet
+        </nav>
+
+        <!-- REQUISITO 1: LAYOUT DE DUAS COLUNAS (GRID/FLEX) -->
+        <div class="product-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; margin-bottom: 3rem;">
+            
+            <!-- COLUNA DA ESQUERDA: GALERIA DE IMAGENS -->
+            <div class="gallery-container" style="display: flex; flex-direction: column; gap: 1rem;">
+                <!-- Foto principal com aspect-ratio e object-fit exigidos -->
+                <img src="Cupcake.jpg" alt="Cupcake gourmet de baunilha com cobertura rosa delicada" class="main-image" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px;" />
+                
+                <!-- Miniaturas (Thumbnails) com efeito hover gerenciado pelo CSS -->
+                <div class="thumbnails" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;">
+                    <img src="cupcake_frontal.jpg" alt="Vista frontal do Cupcake" />
+                    <img src="cobertura_cupcake.jpg" alt="Detalhe da cobertura rosa" />
+                    <img src="embalagen_cupcake.jpg" alt="Caixa para presente Doce Magia" />
+                    <img src="fazendo_cupcake.jpg" alt="Mesa de doces com cupcakes" />
+                </div>
+            </div>
+
+            <!-- COLUNA DA DIREITA: INFORMAÇÕES DE COMPRA -->
+            <div class="product-info" style="display: flex; flex-direction: column; gap: 1rem;">
+                <h1 style="font-size: 2rem; color: #331b1b;">Cupcake Gourmet de Baunilha</h1>
+                
+                <!-- Avaliação em estrelas -->
+                <div class="rating" style="color: #f59e0b;">⭐⭐⭐⭐⭐ <span style="color: #8c7171; font-size: 0.875rem;">(42 avaliações)</span></div>
+                
+                <!-- Preço antigo e atual -->
+                <div class="price-box" style="margin: 0.5rem 0;">
+                    <span class="old-price" style="color: #8c7171; text-decoration: line-through; font-size: 1rem;">R$ 15,00</span>
+                    <div class="current-price" style="color: #d47a8d; font-size: 2.25rem; font-weight: 700;">R$ 12,50</div>
+                </div>
+
+                <!-- Seletor de opções usando <select> -->
+                <div class="options-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="size-select" style="font-size: 0.875rem; font-weight: 500; color: #331b1b;">Escolha a quantidade / kit:</label>
+                    <select id="size-select" class="options-select" style="width: 100%; padding: 0.75rem; border: 1px solid #f5e1e1; border-radius: 12px; background-color: #fff;">
+                        <option value="p">Unidade Individual - R$ 12,50</option>
+                        <option value="m">Caixa com 6 unidades - R$ 70,00</option>
+                        <option value="g">Caixa Festas com 12 unidades - R$ 135,00</option>
+                    </select>
+                </div>
+
+                <!-- LINK OBRIGATÓRIO DIRECIONANDO PARA O CARRINHO -->
+                <a href="carrinho.html" class="btn-buy" style="display: inline-block; text-align: center; background-color: #d47a8d; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600;">Adicionar ao Carrinho</a>
+            </div>
+
+        </div>
+
+        <!-- REQUISITO 2: TABELA DE ESPECIFICAÇÕES TÉCNICAS REQUISITADA -->
+        <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: #d47a8d;">Especificações Técnicas</h2>
+        <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #f5e1e1;">
+            <caption style="padding: 0.75rem; font-size: 0.875rem; color: #8c7171; text-align: left;">Ficha técnica de preparo e consumo do produto</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">Origem / Fabricação</th>
+                    <td>Doce Magia Confeitaria Artesanal</td>
+                </tr>
+                <tr>
+                    <th scope="row">Massa / Sabor</th>
+                    <td>Baunilha de Madagascar com Gotas de Chocolate</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cobertura</th>
+                    <td>Buttercream de Frutas Vermelhas com Confeitos Dourados</td>
+                </tr>
+                <tr>
+                    <th scope="row">Validade Máxima</th>
+                    <td>Até 3 dias em temperatura ambiente fresca ou geladeira</td>
+                </tr>
+                <tr>
+                    <th scope="row">Alergênicos</th>
+                    <td>Contém glúten, lactose, ovos e derivados de trigo.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2.5rem; margin-top: 4rem; border-top: 1px solid #f5e1e1; color: #8c7171;">
+        <p>&copy; 2026 Doce Magia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
