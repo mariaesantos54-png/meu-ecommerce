@@ -6,18 +6,18 @@ Projeto prático de E-commerce de confeitaria artesanal desenvolvido na Unidade 
 
 ### Páginas Principais
 
-- 🏠 [Vitrine Principal e Cardápio (index.html)](https://github.io)
-- 🛒 [Sacola de Compras (carrinho.html)](https://github.io)
-- 👤 [Cadastro e Finalização do Pedido (cadastro.html)](https://github.io)
-- 🔔 [Avise-me / Lista de Espera (avise-me.html)](https://github.io)
+- 🏠 [Vitrine Principal e Cardápio (index.html)](https://mariaesantos54-png.github.io/meu-ecommerce/)
+- 🛒 [Sacola de Compras (carrinho.html)](https://mariaesantos54-png.github.io/meu-ecommerce/carrinho.html)
+- 👤 [Cadastro e Finalização do Pedido (cadastro.html)](https://mariaesantos54-png.github.io/meu-ecommerce/cadastro.html)
+- 🔔 [Avise-me / Lista de Espera (avise-me.html)](https://mariaesantos54-png.github.io/meu-ecommerce/avise-me.html).
 
 ### Catálogo de Produtos
 
-- 🎂 [Bolo Trufado (encomenda-bolo.html)](https://github.io)
-- 🍪 [Cookie Double Chocolate (encomenda-cookie.html)](https://github.io)
-- 🧁 [Cupcake Artesanal (encomenda-cupcake.html)](https://github.io)
-- 🍩 [Donut Gourmet (encomenda-donut.html)](https://github.io)
-- 🍬 [Macarons Finos (encomenda-macarons.html)](https://github.io)
+- 🎂 [Bolo Trufado (encomenda-bolo.html)](https://mariaesantos54-png.github.io/meu-ecommerce/encomenda-bolo.html)
+- 🍪 [Cookie Double Chocolate (encomenda-cookie.html)](https://mariaesantos54-png.github.io/meu-ecommerce/encomenda-cookie.html)
+- 🧁 [Cupcake Artesanal (encomenda-cupcake.html)](https://mariaesantos54-png.github.io/meu-ecommerce/encomenda-cupcake.html)
+- 🍩 [Donut Gourmet (encomenda-donut.html)](https://mariaesantos54-png.github.io/meu-ecommerce/encomenda-donut.html)
+- 🍬 [Macarons Finos (encomenda-macarons.html)](https://mariaesantos54-png.github.io/meu-ecommerce/encomenda-macarons.html)
 
 ---
 
