@@ -1,4 +1,4 @@
-# 🧁 Doce Magia Confeitaria - Auditado e Validado pelo W3C
+# 🧁 Doce Magia Confeitaria - Auditado e Validado pelo W3C.
 
 Projeto prático de E-commerce de confeitaria artesanal desenvolvido na Unidade Curricular de **Linguagem de Marcação (HTML5 & CSS3)**.
 
