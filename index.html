@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doce Magia | Confeitaria Artesanal Gourmet</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- 1. CABEÇALHO SEMÂNTICO -->
@@ -18,29 +18,30 @@
         </nav>
       </div>
     </header>
+
     <main>
       <!-- 2. BANNER PRINCIPAL RESPONSIVO VIA PICTURE -->
       <section class="hero">
         <picture>
           <!-- Foto ajustada para celular -->
-          <source media="(max-width: 600px)" srcset="logo.jpg" />
+          <source media="(max-width: 600px)" srcset="logo.jpg">
           <!-- Foto padrão para computador -->
           <img
             src="logo.jpg"
             alt="Mesa decorada cheia de docinhos gourmet variados e coloridos prontos para uma festa"
             width="1600"
             height="400"
-          />
+          >
         </picture>
         <div class="hero-text">
-          <h2>A Arte da Ilusão Visual</h2>
+          <h1>A Arte da Ilusão Visual</h1>
           <p>
             Confeitaria francesa e criações hiper-realistas esculpidas à mão.
           </p>
         </div>
       </section>
 
-      <!-- 3. CATEGORIAS COM IMAGENS CIRCULARES  -->
+      <!-- 3. CATEGORIAS COM IMAGENS CIRCULARES -->
       <section id="categorias" class="container">
         <h2 class="section-title">Nossas Coleções</h2>
         <div class="categories-flex">
@@ -52,10 +53,9 @@
                 alt="Categoria Les Fruits Trompe-l'œil frutas hiper-realistas"
                 width="120"
                 height="120"
-              />
-              <!-- Caixinha de texto que vai aparecer no hover -->
+              >
               <div class="desc-hover bg-fruits">
-                <h4>Trompe-l'œil</h4>
+                <h3>Trompe-l'œil</h3>
                 <p>
                   Frutas hiper-realista esculpidas com recheios surpreendentes.
                 </p>
@@ -72,9 +72,9 @@
                 alt="Categoria Les Fleurs sobremesas em formato de flores esculpidas"
                 width="120"
                 height="120"
-              />
+              >
               <div class="desc-hover bg-fleurs">
-                <h4>Les Fleurs</h4>
+                <h3>Les Fleurs</h3>
                 <p>Sobremesas em pétalas e formatos florais delicados.</p>
               </div>
             </div>
@@ -89,9 +89,9 @@
                 alt="Categoria La Viennoiserie croissants e folhados dourados"
                 width="120"
                 height="120"
-              />
+              >
               <div class="desc-hover bg-viennoiserie">
-                <h4>Viennoiserie</h4>
+                <h3>Viennoiserie</h3>
                 <p>Croissants e folhados dourados e crocantes.</p>
               </div>
             </div>
@@ -106,9 +106,9 @@
                 alt="Categoria Clássicos Reimaginados tortas geométricas e minimalistas"
                 width="120"
                 height="120"
-              />
+              >
               <div class="desc-hover bg-classicos">
-                <h4>Clássicos</h4>
+                <h3>Clássicos</h3>
                 <p>Tortas geométricas e designs minimalistas.</p>
               </div>
             </div>
@@ -116,6 +116,7 @@
           </a>
         </div>
       </section>
+
       <!-- 4 e 5. VITRINE EM GRID COM 6 PRODUTOS E 1 ESGOTADO -->
       <section id="vitrine" class="container">
         <h2 class="section-title">Destaques do Dia</h2>
@@ -130,14 +131,13 @@
                 width="300"
                 height="300"
                 loading="lazy"
-              />
-              <!--  USA loading="lazy" PARA NAO DEIXAR EPSADO, E IR CARREGANDO ENQUANTO AS PESSOA VÃO ROLANDO A TELA -->
+              >
             </figure>
-            <figcaption class="product-info">
+            <div class="product-info">
               <h3>Bolo Trufado de Chocolate</h3>
               <p class="price">R$ 100,00</p>
-              <a href="encomenda-bolo.html" class="btn-buy">Encomendar</a> <!--NA HORA Q EU CLICAR EM ENCOMENDAR MUDA PRA OUTRA PAGINA-->
-            </figcaption>
+              <a href="encomenda-bolo.html" class="btn-buy">Encomendar</a>
+            </div>
           </article>
 
           <!-- Produto 2 -->
@@ -149,13 +149,13 @@
                 width="300"
                 height="300"
                 loading="lazy"
-              />
+              >
             </figure>
-            <figcaption class="product-info">
+            <div class="product-info">
               <h3>Cupcake gourmet de baunilha com cobertura rosa</h3>
               <p class="price">R$ 15,00</p>
               <a href="encomenda-cupcake.html" class="btn-buy">Encomendar</a>
-            </figcaption>
+            </div>
           </article>
 
           <!-- Produto 3 -->
@@ -167,13 +167,13 @@
                 width="300"
                 height="300"
                 loading="lazy"
-              />
+              >
             </figure>
-            <figcaption class="product-info">
+            <div class="product-info">
               <h3>Cookie Double Chocolate</h3>
               <p class="price">R$ 9,60</p>
               <a href="encomenda-cookie.html" class="btn-buy">Encomendar</a>
-            </figcaption>
+            </div>
           </article>
 
           <!-- Produto 4 -->
@@ -185,13 +185,13 @@
                 width="300"
                 height="300"
                 loading="lazy"
-              />
+              >
             </figure>
-            <figcaption class="product-info">
+            <div class="product-info">
               <h3>Box Macarons Franceses (6 unid.)</h3>
               <p class="price">R$ 52,00</p>
               <a href="encomenda-macarons.html" class="btn-buy">Encomendar</a>
-            </figcaption>
+            </div>
           </article>
 
           <!-- Produto 5 -->
@@ -203,13 +203,13 @@
                 width="300"
                 height="300"
                 loading="lazy"
-              />
+              >
             </figure>
-            <figcaption class="product-info">
+            <div class="product-info">
               <h3>Donut Clássico</h3>
               <p class="price">R$ 10,00</p>
               <a href="encomenda-donut.html" class="btn-buy">Encomendar</a>
-            </figcaption>
+            </div>
           </article>
 
           <!-- REQUISITO 5: PRODUTO "ESGOTADO" COM FILTROS -->
@@ -222,13 +222,13 @@
                 width="300"
                 height="300"
                 loading="lazy"
-              />
+              >
             </figure>
-            <figcaption class="product-info">
+            <div class="product-info">
               <h3>Cheesecake de Frutas Vermelhas</h3>
               <p class="price">Indisponível</p>
-               <a href="avise-me.html" class="btn-sold">Avise-me</a> <!-- PRA QUANDO CLICAR AVISAR-->
-            </figcaption>
+              <a href="avise-me.html" class="btn-sold">Avise-me</a>
+            </div>
           </article>
         </div>
       </section>

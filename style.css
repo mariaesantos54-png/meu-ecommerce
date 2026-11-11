@@ -1,14 +1,10 @@
 /*1. VARIÁVEIS, RESET E CONFIGURAÇÕES GERAIS (PADRÕES W3C)*/
 :root {
-  --primary: #d47a8d;
-  /* COR ROSA DO LOGO*/
-  --primary-light: #fbebee;
-  /* FUNDO */
-  --dark: #1a1a1a;
-  /* CINZA PARA CONTRASTE */
+  --primary: #d47a8d; /* COR ROSA DO LOGO*/
+  --primary-light: #fbebee; /* FUNDO */
+  --dark: #1a1a1a; /* CINZA PARA CONTRASTE */
   --muted: #666666;
-  --bg-light: #fafafa;
-  /* FUNDO DA PAGINA */
+  --bg-light: #fafafa; /* FUNDO DA PAGINA */
   --white: #ffffff;
   --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -113,8 +109,7 @@ nav a:hover {
   width: 100%;
   height: 450px;
   object-fit: cover;
-  opacity: 0.7;
-  /* ESCURECE PARA DESTACAR O TEXTO */
+  opacity: 0.7; /* ESCURECE PARA DESTACAR O TEXTO */
 }
 
 .hero-text {
@@ -148,8 +143,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
-  /* AUMENTADO: Afasta os círculos lateralmente e verticalmente */
+  gap: 50px; /* AUMENTADO: Afasta os círculos lateralmente e verticalmente */
   padding: 20px 0;
 }
 
@@ -163,19 +157,14 @@ nav a:hover {
 }
 
 .img-wrapper {
-  position: relative;
-  /* PERMITE Q O TEXTO FLUTE POR CIMA */
-  width: 130px;
-  /* TAMANHO */
+  position: relative; /* PERMITE Q O TEXTO FLUTE POR CIMA */
+  width: 130px; /* TAMANHO */
   height: 130px;
-  border-radius: 50%;
-  /* VIRA CICULOS*/
-  overflow: hidden;
-  /* CORTA AS COISAS Q SAEM DE DENTRO DO CIRCULO */
+  border-radius: 50%; /* VIRA CICULOS*/
+  overflow: hidden; /* CORTA AS COISAS Q SAEM DE DENTRO DO CIRCULO */
   border: 3px solid transparent;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 15px;
-  /* AUMENTADO: SEPARA O CIRCULO DO TEXTO Q ESTA EM BAIXO */
+  margin-bottom: 15px; /* AUMENTADO: SEPARA O CIRCULO DO TEXTO Q ESTA EM BAIXO */
   transition: border-color 0.3s ease;
 }
 
@@ -196,13 +185,11 @@ nav a:hover {
 
 /* Efeito Hover das Categorias (QUANDO PASSA O MOUSE EM CIMA)*/
 .category-item:hover .img-wrapper {
-  border-color: #d4af37;
-  /* BORDA */
+  border-color: #d4af37; /* BORDA */
 }
 
 .img-wrapper:hover img {
-  transform: scale(1.1);
-  /* AMPLIA A IMAGEM */
+  transform: scale(1.1); /* AMPLIA A IMAGEM */
 }
 
 .category-item:hover span {
@@ -223,14 +210,12 @@ nav a:hover {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
-  opacity: 0;
-  /* COMEÇA INVISIVEL */
+  opacity: 0; /* COMEÇA INVISIVEL */
   transition: opacity 0.3s ease;
 }
 
 .img-wrapper:hover .desc-hover {
-  opacity: 1;
-  /* REVELA OQ ESTA ESCRITO */
+  opacity: 1; /* REVELA OQ ESTA ESCRITO */
 }
 
 .desc-hover h4 {
@@ -265,8 +250,7 @@ nav a:hover {
 
 .desc-hover.bg-fleurs h4,
 .desc-hover.bg-fleurs p {
-  color: #000000;
-  /* LETRA PRETA NO FUNDO ROSA PRA DAR CONTRASTE */
+  color: #000000; /* LETRA PRETA NO FUNDO ROSA PRA DAR CONTRASTE */
 }
 
 /* 5. REQUISITO 4: VITRINE PADRONIZADA (PRODUTOS)*/
@@ -294,8 +278,7 @@ nav a:hover {
 .product-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  /* MANTÉM O QUADRADO PERFEITO  */
+  aspect-ratio: 1 / 1; /* MANTÉM O QUADRADO PERFEITO */
   overflow: hidden;
   background-color: #f7f7f7;
 }
@@ -319,18 +302,14 @@ nav a:hover {
   flex-grow: 1;
 }
 
+/* CORRIGIDO PARA O PADRÃO W3C */
 .product-info h3 {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
   margin-bottom: 10px;
-  height: 44px;
-  /* DEIXA OS BOTÕES ALINHADOS  */
-  display: -webkit-box;
-  line-clamp: 2;
-  /* LIMITA O TEXTO EM O MAXIMO 2 LINHAS */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  height: 2.8em; /* DEIXA OS BOTÕES ALINHADOS EM 2 LINHAS (1.4 x 2) */
+  overflow: hidden; /* CORTA O TEXTO QUE PASSAR DE 2 LINHAS */
 }
 
 .price {
@@ -338,18 +317,14 @@ nav a:hover {
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 15px;
-  margin-top: auto;
-  /* EMPURRA O PREÇO E DESCRICAO PRA BAIXO */
+  margin-top: auto; /* EMPURRA O PREÇO E DESCRICAO PRA BAIXO */
 }
 
 /* AJUSTADO: Agora estiliza tags <a> para agirem como botões */
 .btn-buy {
-  display: inline-block;
-  /* Permite usar paddings e larguras corretas */
-  text-align: center;
-  /* Centraliza o texto */
-  text-decoration: none;
-  /* Remove a linha sublinhada padrão de link */
+  display: inline-block; /* Permite usar paddings e larguras corretas */
+  text-align: center; /* Centraliza o texto */
+  text-decoration: none; /* Remove a linha sublinhada padrão de link */
   width: 100%;
   padding: 12px;
   background-color: var(--primary-light);
@@ -378,8 +353,7 @@ nav a:hover {
 }
 
 .product-sold-out:hover .product-image img {
-  transform: none;
-  /* TIRA O ZOOM DOS Q ESTÃO ESGOTADOS */
+  transform: none; /* TIRA O ZOOM DOS Q ESTÃO ESGOTADOS */
 }
 
 /* ETIQUETA FLUTUANTE (ESGOTADO)*/
@@ -410,14 +384,12 @@ nav a:hover {
   border-radius: 4px;
   font-size: 0.9rem;
   font-weight: 600;
-  cursor: pointer;
-  /* Cursor de clique ativo */
+  cursor: pointer; /* Cursor de clique ativo */
   transition: var(--transition);
 }
 
 .btn-sold:hover {
-  background-color: #d1d1d6;
-  /* Efeito hover cinza escuro sutil */
+  background-color: #d1d1d6; /* Efeito hover cinza escuro sutil */
 }
 
 /* 7. REQUISITO 6: RODAPÉ E MEDIA QUERIES (RESPONSIVIDADE)*/
@@ -439,7 +411,6 @@ nav a:hover {
 
 /* TELAS PRA TABLET*/
 @media (max-width: 768px) {
-
   .header-flex,
   .footer-flex {
     flex-direction: column;
@@ -476,12 +447,11 @@ nav a:hover {
   }
 
   .categories-flex {
-    gap: 40px;
-    /* DEIXA SEPARADO CERTINHO NO TABLET TBM (SE AJUSTA) */
+    gap: 40px; /* DEIXA SEPARADO CERTINHO NO TABLET TBM (SE AJUSTA) */
   }
 }
 
-/* TELAS DE CELULARES  */
+/* TELAS DE CELULARES */
 @media (max-width: 480px) {
   .img-wrapper {
     width: 115px;
@@ -489,11 +459,9 @@ nav a:hover {
   }
 
   .categories-flex {
-    gap: 30px;
-    /* AJUSTE PARA FUNCIONAR EM TELAS PEQUENAS*/
+    gap: 30px; /* AJUSTE PARA FUNCIONAR EM TELAS PEQUENAS*/
   }
 }
-
 
 /* PARTE AONDE VC CLICA PRA ENCOMENDAR */
 .order-wrapper {
@@ -545,151 +513,129 @@ nav a:hover {
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: var(--primary);
-  outline: none;
-  box-shadow: 0 0 0 3px var(--primary-light);
+border-color: var(--primary);
+outline: none;
+box-shadow: 0 0 0 3px var(--primary-light);
 }
-
 .btn-submit {
-  margin-top: 10px;
+margin-top: 10px;
 }
 
 .back-link {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: var(--transition);
+display: block;
+text-align: center;
+margin-top: 20px;
+color: var(--muted);
+text-decoration: none;
+font-size: 0.9rem;
+transition: var(--transition);
 }
-
 .back-link:hover {
-  color: var(--primary);
+color: var(--primary);
 }
-
 .popup-aviso {
-  position: fixed;
-  bottom: -100px;
-  /* ESCONDIDO*/
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #4CAF50;
-  /* VERDE COM SUCESSO*/
-  color: white;
-  padding: 16px 24px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  font-family: sans-serif;
-  font-weight: bold;
-  transition: bottom 0.4s ease-in-out;
-  /* SOBRE E DESCE QUANDO VC CONFIRMA*/
-  z-index: 1000;
-  text-align: center;
-  white-space: nowrap;
+position: fixed;
+bottom: -100px; /* ESCONDIDO*/
+left: 50%;
+transform: translateX(-50%);
+background-color: #4CAF50; /* VERDE COM SUCESSO*/
+color: white;
+padding: 16px 24px;
+border-radius: 8px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+font-family: sans-serif;
+font-weight: bold;
+transition: bottom 0.4s ease-in-out; /* SOBRE E DESCE QUANDO VC CONFIRMA*/
+z-index: 1000;
+text-align: center;
+white-space: nowrap;
 }
 
-/* MOSTRAR O POP-UP */
+/*MOSTRAR O POP-UP */
 .popup-aviso.mostrar {
-  bottom: 20px;
-  /* SOBRE E DEPOS ABAIXA*/
+bottom: 20px; /* SOBE E DEPOS ABAIXA*/
 }
 
 /* PÁGINA DE DETALHES DO PRODUTO (REQUISITOS PARTE 2) */
-
-/* 1. Layout de Duas Colunas para a Galeria e Informações */
 .product-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 3rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+gap: 2.5rem;
+margin-bottom: 3rem;
 }
-
 .gallery-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+display: flex;
+flex-direction: column;
+gap: 1rem;
 }
 
-/* Requisito: Foto principal com aspect-ratio e object-fit: cover */
 .main-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 12px;
+width: 100%;
+aspect-ratio: 4 / 3;
+object-fit: cover;
+border-radius: 12px;
 }
-
-/* Grid das miniaturas logo abaixo da foto principal */
 .thumbnails {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 0.75rem;
 }
 
-/* Requisito: Miniaturas com efeito de borda destacada no :hover */
 .thumbnails img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.2s, transform 0.2s;
+width: 100%;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+border-radius: 8px;
+cursor: pointer;
+border: 2px solid transparent;
+transition: border-color 0.2s, transform 0.2s;
 }
-
 .thumbnails img:hover {
-    border-color: #d946ef; /* Destaca com a cor rosa da Doce Magia */
-    transform: scale(1.02); /* Dá um leve zoom elegante no hover */
+border-color: #d946ef;
+transform: scale(1.02);
 }
-
-/* Alinhamento da coluna de informações da direita */
+/* ALINHAMENOT DAS COLUNAS NA DIREITA*/
 .product-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+display: flex;
+flex-direction: column;
+gap: 1rem;
 }
 
-/* 2. Estilização da Tabela de Especificações Técnicas */
+/* 2. ESTILIZAÇÃO */
 table {
-    width: 100%;
-    border-collapse: collapse; /* Requisito de consistência visual */
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #f5e1e1;
-    margin: 1.5rem 0;
+width: 100%;
+border-collapse: collapse;
+background-color: #fff;
+border-radius: 12px;
+overflow: hidden;
+border: 1px solid #f5e1e1;
+margin: 1.5rem 0;
 }
-
-table th, table td {
-    padding: 1.1rem;
-    text-align: left;
-    border-bottom: 1px solid #f5e1e1;
-}
-
-/* Garante o uso correto do th scope="row" conforme a rubrica */
-table th {
-    background-color: #fff0f5; /* Fundo rosa bem suave para os títulos internos */
-    font-weight: 600;
-    width: 30%;
-    color: #331b1b;
-}
-
+table th,
 table td {
-    color: #4a2828;
+padding: 1.1rem;
+text-align: left;
+border-bottom: 1px solid #f5e1e1;
 }
 
-/* Requisito obrigatório: Efeito Zebrado na tabela */
+table th {
+background-color: #fff0f5;
+font-weight: 600;
+width: 30%;
+color: #331b1b;
+}
+table td {
+color: #4a2828;
+}
 table tbody tr:nth-child(even) {
-    background-color: #fffafb; /* Altera a cor das linhas pares de forma suave */
+background-color: #fffafb;
 }
-
 /* CARRINHO */
 @media (min-width: 900px) {
-    .cart-layout {
-        grid-template-columns: 2fr 1fr !important;
-    }
+.cart-layout {
+grid-template-columns: 2fr 1fr !important;
 }
-
+}
 .btn-checkout:hover {
-    background-color: #b35d70; /* SACOLA */
+background-color: #b35d70; /* SACOLA */
 }
